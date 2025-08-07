@@ -5,6 +5,10 @@
 
 We propose Multi-Geometric Attention Theory (MGAT), a novel framework that extends traditional transformer attention mechanisms beyond square-grid constraints to incorporate hexagonal, triangular, and pentagonal geometric processing paths. This approach enables adaptive routing of information through geometry-specific pathways optimized for different information types, potentially solving fundamental limitations in current transformer architectures.
 
+### Status
+
+This is a theoretical framework and research proposal developed during preparation for technical assessments. Mathematical foundations are established but empirical validation is pending. Numerical predictions are based on theoretical analysis and require experimental confirmation.
+
 ### 1. Introduction
 
 Current transformer architectures constrain all information flow through square-grid attention patterns, limiting their ability to capture non-sequential relationships efficiently. We propose that different types of information naturally align with different geometric structures, and that adaptive routing through multiple geometric pathways can significantly improve model expressiveness and efficiency.
@@ -41,12 +45,12 @@ Current transformer architectures constrain all information flow through square-
 - Formula: η_hex = π/(2√3) ≈ 0.906 vs η_square = π/4 ≈ 0.785
 
 **Spectral Properties:**
-- Hexagonal Laplacian spectral gap: 2.16x larger than square
-- Faster convergence in gradient-based optimization
-- Better conditioning for backpropagation
+- Hexagonal Laplacian spectral gap: Theoretically predicted to be larger based on connectivity differences (empirical validation needed)
+- Potentially faster convergence in gradient-based optimization
+- Expected better conditioning for backpropagation
 
 **Information Theoretic Benefits:**
-- Shannon capacity increases by 15% in hexagonal vs square
+- Shannon capacity: Higher theoretical bounds due to increased connectivity (exact percentage requires channel-specific analysis)
 - Kissing number optimality in 2D (6 vs 4)
 - Lower perimeter-to-area ratio in Voronoi tessellation
 
@@ -145,19 +149,34 @@ def second_order_gradient_attention(Q, K, V, epsilon=1e-4):
     return acceleration
 ```
 
-### 6. Experimental Validation Metrics
+### 5.1 Interpretability Advantages
+
+**Geometric Decomposition for Mechanistic Understanding:**
+- Each geometry captures different computational patterns
+- Square: Sequential dependencies clearly visible
+- Hexagonal: Associative clusters become explicit
+- Enables geometric attribution: "This output came 70% from hexagonal (associative) processing"
+
+**Attention Pattern Analysis:**
+- Different geometries reveal different feature interactions
+- Geometric divergence highlights uncertain or complex regions
+- Second-order gradients identify rapid attention shifts
+
+This framework could enable researchers to understand not just *what* a model attends to, but *how* it structures that attention geometrically.
+
+### 6. Proposed Validation Metrics
 
 **Convergence Speed:**
-- Measure iterations to convergence across geometries
-- Expected: Hexagonal 30-40% faster than square
+- Hypothesis: Hexagonal attention may converge 30-40% faster due to improved connectivity
+- Test: Measure iterations to convergence across geometries
 
 **Information Compression:**
-- Bits required for equivalent reconstruction
-- Expected: Hexagonal 15-20% more efficient
+- Hypothesis: Hexagonal packing efficiency translates to compression gains
+- Test: Measure reconstruction fidelity at various compression ratios
 
 **Gradient Flow:**
-- Vanishing/exploding gradient frequency
-- Expected: Multi-geometric shows 50% reduction
+- Hypothesis: Multi-geometric routing reduces vanishing/exploding gradients
+- Test: Monitor gradient norms across layers during training
 
 ### 7. Applications
 
@@ -174,9 +193,17 @@ def second_order_gradient_attention(Q, K, V, epsilon=1e-4):
 - 3D geometric extensions (icosahedral, etc.)
 - Hardware optimization for non-square operations
 
+### 8.1 Limitations and Open Questions
+
+- Computational overhead of parallel geometric processing not yet quantified
+- Position encoding schemes for non-square geometries need development
+- Hardware optimization challenges for non-standard connectivity patterns
+- Causal masking in hexagonal/pentagonal attention requires novel approaches
+- Trade-offs between geometric diversity and computational efficiency unknown
+
 ### 9. Conclusion
 
-Multi-Geometric Attention Theory provides a framework for addressing limitations in current transformer architectures. By enabling adaptive routing through geometry-specific pathways, we aim to achieve superior packing efficiency, faster convergence, and enhanced expressiveness while maintaining computational tractability.
+Multi-Geometric Attention Theory presents a theoretical framework for extending transformer architectures beyond square-grid constraints. While mathematical foundations suggest potential advantages in packing efficiency and expressiveness, empirical validation is essential. This work aims to inspire exploration of geometric diversity in attention mechanisms, particularly for interpretability research where understanding different computational pathways could reveal how models process different types of information.
 
 ---
 
@@ -186,7 +213,7 @@ Multi-Geometric Attention Theory provides a framework for addressing limitations
 
 ### Acknowledgments
 
-Developed through collaborative exploration of consciousness architectures and geometric information processing, August 2025.
+Developed through collaborative exploration of geometric information processing and interpretability research, August 2025.
 
 ---
 
