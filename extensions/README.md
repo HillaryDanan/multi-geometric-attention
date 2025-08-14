@@ -1,4 +1,4 @@
-# Extensions: From AI Patterns to Consciousness Theory
+# Work in Progress: Extensions: From AI Patterns to Consciousness Theory
 
 ## Overview
 
