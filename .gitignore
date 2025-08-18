@@ -1,9 +1,32 @@
+# Python
 __pycache__/
 *.py[cod]
-.ipynb_checkpoints/
-.vscode/
-.idea/
-*.log
-.DS_Store
+*.so
+.Python
+env/
 venv/
 .env
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Data
+*.h5
+*.pkl
+data/raw/
+data/processed/
+
+# Logs
+*.log
+logs/
+
+# Temporary
+*.tmp
+*.bak
+reorg.py
