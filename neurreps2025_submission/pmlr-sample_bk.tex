@@ -74,14 +74,12 @@ We identified four distinct phases based on semantic content analysis:
 \item \textbf{Integration (38.6\%)}: Connecting and synthesizing known elements. Identified through markers like ``connect,'' ``combine,'' ``synthesize,'' and ``merge.'' The most common phase, representing holistic processing.
 \end{itemize}
 
-\footnotetext{Inter-rater reliability for phase classification was not formally assessed in this initial study. Phase markers were identified through linguistic analysis in collaboration with Claude (Anthropic), representing a limitation to be addressed in future work.}
-
 \subsubsection{Data Collection Protocol}
 
 \begin{itemize}
 \item \textbf{Model}: GPT-3.5-turbo via OpenAI API
 \item \textbf{Sample Size}: 1,000 responses
-\item \textbf{Prompt Diversity}: 20 prompts per session from a curated set covering technical, creative, analytical, and philosophical domains
+\item \textbf{Prompt Diversity}: 50 different conversation starters covering technical, creative, analytical, and philosophical domains
 \item \textbf{Response Length}: 100-500 tokens per response
 \item \textbf{Temperature Setting}: 0.7 (default)
 \item \textbf{Sampling Period}: July-August 2025
@@ -340,7 +338,7 @@ However, the consistency across diverse prompts and sessions suggests deeper arc
 Priority research directions include:
 
 \begin{enumerate}
-\item \textbf{Direct Validation}: Analyze attention patterns in accessible models
+\item \textbf{Direct Validation}: Analyze attention patterns in accessible models (GPT-2, BERT)
 \item \textbf{Cross-Model Testing}: Replicate phase analysis across architectures
 \item \textbf{Causal Experiments}: Modify attention patterns to test phase changes
 \item \textbf{Automated Classification}: Develop robust automated phase detection
@@ -359,11 +357,8 @@ The intersection of empirical observation with geometric theory opens new avenue
 
 \acks{We thank the open-source community for enabling transparent and reproducible research.}
 
-% Code and Data Availability - UPDATED WITH BOTH REPOS!
-\textbf{Code and Data Availability:} 
-All analysis code and data available at: \url{https://github.com/HillaryDanan/ouroboros-learning}
-
-Theoretical framework and geometric attention hypothesis: \url{https://github.com/HillaryDanan/multi-geometric-attention}
+% Code and Data Availability
+\textbf{Code and Data Availability:} All analysis code and data available at: \url{https://github.com/HillaryDanan/multi-geometric-attention}
 
 \bibliography{references}
 

@@ -1,0 +1,43 @@
+#!/bin/bash
+# Compile NeurReps 2025 Paper
+
+echo "🔧 Compiling NeurReps 2025 Paper..."
+echo "=================================="
+
+# 1. Save the LaTeX paper as paper.tex
+echo "📝 Make sure paper.tex is saved..."
+
+# 2. Save references.bib 
+echo "📚 Make sure references.bib is saved..."
+
+# 3. Compile with pdflatex and bibtex
+echo "🚀 Compiling LaTeX..."
+pdflatex paper.tex
+bibtex paper
+pdflatex paper.tex
+pdflatex paper.tex  # Run twice for references
+
+echo ""
+echo "=================================="
+echo "✅ DONE! Check paper.pdf"
+echo "=================================="
+
+# 4. Quick check
+if [ -f "paper.pdf" ]; then
+    echo "✅ paper.pdf created successfully!"
+    echo "📄 Paper is ready for submission!"
+    
+    # Open the PDF (Mac)
+    open paper.pdf
+else
+    echo "❌ Something went wrong. Check for errors above."
+fi
+
+echo ""
+echo "📋 SUBMISSION CHECKLIST:"
+echo "  [ ] paper.pdf looks good"
+echo "  [ ] Anonymous (no author names)"
+echo "  [ ] Under 9 pages"
+echo "  [ ] Upload to OpenReview"
+echo ""
+echo "🎉 You're ready for NeurReps 2025!"

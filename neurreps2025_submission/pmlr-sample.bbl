@@ -1,0 +1,36 @@
+\begin{thebibliography}{4}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bronstein et~al.(2017)Bronstein, Bruna, Cohen, and
+  Veli{\v{c}}kovi{\'c}]{bronstein2021geometric}
+Michael~M Bronstein, Joan Bruna, Taco Cohen, and Petar Veli{\v{c}}kovi{\'c}.
+\newblock Geometric deep learning: Going beyond euclidean data.
+\newblock \emph{IEEE Signal Processing Magazine}, 34\penalty0 (4):\penalty0
+  18--42, 2017.
+
+\bibitem[Elhage et~al.(2021)Elhage, Nanda, Olsson, Henighan, Joseph, Mann,
+  Askell, Bai, Chen, Conerly, et~al.]{elhage2021mathematical}
+Nelson Elhage, Neel Nanda, Catherine Olsson, Tom Henighan, Nicholas Joseph, Ben
+  Mann, Amanda Askell, Yuntao Bai, Anna Chen, Tom Conerly, et~al.
+\newblock A mathematical framework for transformer circuits.
+\newblock \emph{Transformer Circuits Thread}, 2021.
+
+\bibitem[Frankle and Carbin(2019)]{frankle2019lottery}
+Jonathan Frankle and Michael Carbin.
+\newblock The lottery ticket hypothesis: Finding sparse, trainable neural
+  networks.
+\newblock In \emph{International Conference on Learning Representations}, 2019.
+
+\bibitem[Moser et~al.(2014)Moser, Roudi, Witter, Kentros, Bonhoeffer, and
+  Moser]{moser2014grid}
+Edvard~I Moser, Yasser Roudi, Menno~P Witter, Cynthia Kentros, Tobias
+  Bonhoeffer, and May-Britt Moser.
+\newblock Grid cells and cortical representation.
+\newblock \emph{Nature Reviews Neuroscience}, 15\penalty0 (7):\penalty0
+  466--481, 2014.
+
+\end{thebibliography}
