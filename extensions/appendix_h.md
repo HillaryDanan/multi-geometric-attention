@@ -16,7 +16,7 @@ We propose these observations connect through a framework of consciousness as a 
 
 ### 2.1 Subject and Context
 
-Single subject (H.D., author), female, day 5 of cannabis cessation following 7-month continuous use (100mg THC daily). Morning exercise session (approximately 05:45 EST), elliptical machine, controlled environment.
+Single subject (H.D., author), female, day 5 of cannabis cessation following 7-month continuous use (<=100mg THC daily). Morning exercise session (approximately 05:45 EST), elliptical machine, controlled environment.
 
 ### 2.2 Phenomenological Protocol
 
