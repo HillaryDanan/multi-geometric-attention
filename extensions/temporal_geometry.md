@@ -84,14 +84,29 @@ This paper proposes empirically testable hypotheses about how orthographic prope
 - Control for training data proportions
 - Include tokenization metrics as covariates
 
-### 3.2 What We're NOT Claiming
+### 3.2 Power Analysis and Sample Size Considerations
+
+**Minimum Detectable Effect Size**: 
+With 3-5 languages and multiple confounds, detecting correlations requires large effect sizes (r > 0.7) for 80% power. This pilot deliberately targets only strong correlations.
+
+**Sample Size Justification**:
+- Pilot phase (3-5 languages): Detect only large effects, establish feasibility
+- Validation phase (10-15 languages): Medium effects (r > 0.4) detectable
+- Full study (30+ languages): Small-medium effects (r > 0.25) with confound controls
+
+**Statistical Power Limitations**:
+- With 5 languages and 3 covariates: Power = 0.31 for r = 0.5
+- Need 20 languages for 80% power to detect r = 0.5 with controls
+- Pilot explicitly exploratory, not confirmatory
+
+### 3.3 What We're NOT Claiming
 
 - That orthography CAUSES attention patterns
 - That biological concepts apply to transformers
 - That attention patterns have "geometric" shapes
 - That models can "reverse" cognitive processes
 
-### 3.3 Incremental Validation
+### 3.4 Incremental Validation
 
 **Stage 1**: Establish whether attention patterns differ systematically across languages
 **Stage 2**: If differences exist, identify which linguistic features correlate
