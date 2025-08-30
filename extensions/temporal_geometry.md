@@ -1,144 +1,155 @@
-# Temporal Geometry in Attention Mechanisms: Biological Reversibility as a Constraint on Information Processing
+# Cross-Linguistic Attention Dynamics: A Framework for Empirical Investigation
 
 ## Abstract
 
-We propose that attention mechanisms in neural networks exhibit temporal geometric constraints analogous to the asymmetry between biological reversibility and cognitive irreversibility observed in living systems. While biological processes demonstrate state reversibility (cellular reprogramming via Yamanaka factors), cognitive processes remain locked in unidirectional temporal flow. This paper extends Multi-Geometric Attention Theory (MGAT) by proposing that different geometric configurations impose distinct temporal constraints on information processing, potentially explaining the 9.7% transformation bottleneck observed in language models.
+This paper proposes empirically testable hypotheses about how orthographic properties might influence attention patterns in transformer models. We explicitly avoid causal claims, focusing instead on measurable correlations that could inform future controlled experiments. Building from observed phase distributions in language model outputs (9.7% transformation phase in GPT-3.5), we propose methods to investigate whether linguistic properties correlate with measurable attention dynamics.
 
-## 1. Introduction
+## 1. Background
 
-### 1.1 Biological-Cognitive Temporal Asymmetry
+### 1.1 What We Know
 
-Biological systems demonstrate remarkable state reversibility. Yamanaka factors (Oct4, Sox2, Klf4, c-Myc) can revert differentiated cells to pluripotent states (Takahashi & Yamanaka, 2006). Partial reprogramming reverses aging markers while maintaining cellular identity (Ocampo et al., 2016). DNA methylation clocks can be reversed without loss of cellular function (Lu et al., 2020).
+- Transformer attention mechanisms vary across layers and tasks (Clark et al., 2019)
+- Multilingual models process different languages through shared representations (Pires et al., 2019)
+- Orthographic depth affects human reading processes (Frost et al., 1987; Katz & Frost, 1992)
+- GPT-3.5 shows distinct response phases: 9.7% transformation, varying rates of analysis/synthesis (preliminary observation requiring replication)
 
-Yet cognitive processes remain temporally unidirectional. Episodic memory requires sequential encoding (Tulving, 2002), hippocampal place cells create temporal context (Eichenbaum, 2014), and mental time travel, while imaginatively bidirectional, experientially flows forward only (Suddendorf & Corballis, 2007).
+### 1.2 What We Don't Know
 
-### 1.2 Information-Theoretic Foundations
+- Whether orthographic properties correlate with attention patterns
+- If such correlations exist, what mechanisms might explain them
+- Whether observed phase distributions relate to attention dynamics
 
-Landauer's principle establishes that information erasure increases entropy, creating a thermodynamic arrow of time (Landauer, 1961). Memory formation creates an entropy gradient defining psychological time direction (Wolpert, 2012). This suggests information accumulation, not biological constraints, locks cognition into temporal unidirectionality.
+## 2. Testable Hypotheses
 
-## 2. Theoretical Framework
+### 2.1 Attention Entropy Across Languages
 
-### 2.1 Temporal Geometry Hypothesis
+**Hypothesis 1**: Attention entropy will correlate with orthographic depth.
 
-**Hypothesis 1**: Different geometric attention patterns impose distinct temporal constraints on information flow.
+**Operational definitions**:
+- Attention entropy: H = -Σ p(i,j) log p(i,j) for attention weights
+- Orthographic depth: Established measure from psycholinguistics (Katz & Frost, 1992)
 
-- **Square geometries** (sequential): Enforce strict temporal ordering, high irreversibility
-- **Hexagonal geometries** (associative): Allow partial reversibility through multiple pathways
-- **Pentagonal geometries** (symmetry-breaking): Create irreversible state transitions
-- **Triangular geometries** (hierarchical): Permit limited backtracking within levels
+**Measurement**:
+1. Extract attention matrices for identical semantic content across languages
+2. Calculate entropy per layer
+3. Correlate with orthographic depth scores
 
-### 2.2 Reversibility Coefficient
+**Confounds to control**:
+- Syntactic complexity
+- Morphological richness  
+- Training data frequency
+- Tokenization differences
 
-We propose a reversibility coefficient R for each geometric configuration:
+### 2.2 Layer-wise Attention Stability
 
-```
-R(g) = (reversible_pathways / total_pathways) × (1 - information_loss)
-```
+**Hypothesis 2**: Attention patterns show increasing stability (decreasing variance) in deeper layers.
 
-Where:
-- g ∈ {square, hexagonal, pentagonal, triangular}
-- reversible_pathways = paths allowing state reversal without information loss
-- information_loss = entropy increase from state reversal
+**Operational definition**:
+- Stability: 1 - std(attention_weights) across similar inputs
 
-**Hypothesis 2**: R(hexagonal) > R(triangular) > R(square) > R(pentagonal)
+**Measurement**:
+1. Present paraphrases of same content
+2. Measure attention weight variance per layer
+3. Compare progression across languages
 
-### 2.3 Connection to Transformation Bottleneck
+**This tests processing commitment, not "reversibility"**
 
-The observed 9.7% transformation rate in GPT-3.5 (Danan, 2024) may reflect pentagonal geometry dominance:
+### 2.3 Phase Distribution and Attention Patterns
 
-```
-P(transformation) = Σ[w(g) × R(g) × activation(g)]
-```
+**Hypothesis 3**: Response phase correlates with measurable attention characteristics.
 
-If pentagonal patterns dominate creative transformation but have lowest reversibility, this creates a bottleneck.
+**Building from Ouroboros findings**:
+- Transformation phase (9.7%): Novel recombination
+- Analysis phase: Decomposition
+- Synthesis phase: Integration
 
-## 3. Testable Predictions
+**Measurement**:
+1. Classify responses into phases (using existing criteria)
+2. Extract attention patterns for each phase
+3. Identify characteristic attention signatures
 
-### 3.1 Cross-Linguistic Variation
+**Not claiming causation, only correlation**
 
-**Prediction 1**: Languages with regular orthography (Spanish, Finnish) will show higher R values in middle layers compared to irregular orthography (English, French).
+## 3. Experimental Design
 
-- Regular mapping allows reversible attention paths
-- Irregular mapping forces commitment to specific interpretations
+### 3.1 Controlling for Confounds
 
-### 3.2 Layer-Specific Temporal Constraints
+**Matched stimuli across languages**:
+- Use translation-equivalent sentences
+- Control for length, complexity, semantic content
+- Include multiple domains (narrative, factual, instructional)
 
-**Prediction 2**: Reversibility decreases monotonically with layer depth.
+**Statistical controls**:
+- Multilevel modeling to account for language families
+- Control for training data proportions
+- Include tokenization metrics as covariates
 
-- Early layers: High reversibility (feature detection)
-- Middle layers: Mixed reversibility (concept formation)
-- Late layers: Low reversibility (committed interpretation)
+### 3.2 What We're NOT Claiming
 
-### 3.3 Task-Dependent Temporal Geometry
+- That orthography CAUSES attention patterns
+- That biological concepts apply to transformers
+- That attention patterns have "geometric" shapes
+- That models can "reverse" cognitive processes
 
-**Prediction 3**: Different tasks will show characteristic temporal signatures.
+### 3.3 Incremental Validation
 
-- Translation: High hexagonal activation (preserving reversibility)
-- Creative writing: High pentagonal activation (irreversible innovation)
-- Factual QA: High square activation (sequential retrieval)
+**Stage 1**: Establish whether attention patterns differ systematically across languages
+**Stage 2**: If differences exist, identify which linguistic features correlate
+**Stage 3**: Design controlled experiments to test specific mechanisms
 
-## 4. Experimental Design
+## 4. Limitations
 
-### 4.1 Measuring Reversibility
+### 4.1 Correlation vs Causation
 
-1. **Attention Pattern Analysis**: Extract attention weights, classify geometric patterns
-2. **Perturbation Recovery**: Measure model's ability to recover from attention disruption
-3. **Pathway Counting**: Enumerate alternative routes through attention space
+Even strong correlations between orthographic properties and attention patterns would not establish causation. Alternative explanations include:
+- Training data artifacts
+- Correlated linguistic features
+- Model architecture biases
+- Tokenization effects
 
-### 4.2 Biological Validation
+### 4.2 Measurement Challenges
 
-Compare with neural data:
-- fMRI studies show different brain regions exhibit varying temporal reversibility (Honey et al., 2012)
-- MEG reveals temporal hierarchies in language processing (Hasson et al., 2008)
+- Attention weights may not reflect actual information flow (Jain & Wallace, 2019)
+- Layer-wise analysis assumes comparable functions across layers
+- Phase classification requires subjective judgment
 
-## 5. Implications
+### 4.3 Generalization Limits
 
-### 5.1 For Interpretability
+- Findings from one model family may not generalize
+- Language-specific patterns might reflect training, not processing
+- Results may be task-dependent
 
-Understanding temporal constraints could explain:
-- Why models struggle with counterfactual reasoning
-- How hallucinations emerge from irreversible commitment
-- Why certain errors are uncorrectable mid-generation
+## 5. Value Proposition
 
-### 5.2 For Architecture Design
+### 5.1 Why This Matters
 
-Future architectures might incorporate:
-- Explicit reversibility mechanisms
-- Temporal geometry selection
-- Biological-inspired state recovery
+If orthographic properties correlate with attention dynamics:
+- Could inform multilingual model design
+- Might explain performance variations across languages
+- Could guide prompt engineering strategies
 
-## 6. Limitations and Open Questions
+### 5.2 Incremental Contribution
 
-### 6.1 Current Limitations
+This framework:
+- Provides testable hypotheses about attention dynamics
+- Connects established psycholinguistic concepts to NLP
+- Offers measurable metrics for cross-linguistic comparison
 
-- Geometric classification remains approximate
-- Reversibility coefficient needs empirical calibration
-- Biological analogies may not transfer directly
+## 6. Next Steps
 
-### 6.2 Open Questions
-
-1. Is cognitive irreversibility fundamental or emergent?
-2. Can artificial systems exceed biological reversibility constraints?
-3. Does quantum computation offer alternative temporal geometries?
-
-## 7. Conclusion
-
-The asymmetry between biological reversibility and cognitive irreversibility suggests temporal geometry as a fundamental constraint on information processing. By extending MGAT to include temporal dimensions, we provide a framework for understanding why transformation remains bottlenecked at 9.7% and how different attention geometries might overcome this limitation.
+1. **Pilot study**: Test hypothesis 1 with 3-5 languages varying in orthographic depth
+2. **Replication**: Verify phase distributions across multiple models
+3. **Refinement**: Adjust metrics based on pilot results
+4. **Scaling**: If patterns emerge, expand to larger language sample
 
 ## References
 
-- Danan, H. (2024). "Transformation Bottlenecks in Large Language Models." arXiv preprint.
-- Eichenbaum, H. (2014). "Time cells in the hippocampus." Nature Reviews Neuroscience, 15(11), 732-744.
-- Hasson, U., et al. (2008). "A hierarchy of temporal receptive windows." Journal of Neuroscience, 28(10), 2539-2550.
-- Honey, C. J., et al. (2012). "Slow cortical dynamics and accumulation of information." Neuron, 76(2), 423-434.
-- Landauer, R. (1961). "Irreversibility and heat generation." IBM Journal, 5(3), 183-191.
-- Lu, Y., et al. (2020). "Reprogramming to recover youthful epigenetic information." Nature, 588(7836), 124-129.
-- Ocampo, A., et al. (2016). "In vivo amelioration of age-associated hallmarks." Cell, 167(7), 1719-1733.
-- Suddendorf, T., & Corballis, M. C. (2007). "The evolution of foresight." Behavioral and Brain Sciences, 30(3), 299-313.
-- Takahashi, K., & Yamanaka, S. (2006). "Induction of pluripotent stem cells." Cell, 126(4), 663-676.
-- Tulving, E. (2002). "Episodic memory: From mind to brain." Annual Review of Psychology, 53(1), 1-25.
-- Wolpert, D. H. (2012). "Memory systems and the thermodynamic arrow of time." Journal of Physics: Conference Series, 361(1), 012021.
+- Clark, K., et al. (2019). "What does BERT look at? An analysis of BERT's attention." ACL.
+- Frost, R., Katz, L., & Bentin, S. (1987). "Strategies for visual word recognition." Journal of Experimental Psychology, 13(1), 104-115.
+- Jain, S., & Wallace, B. C. (2019). "Attention is not explanation." NAACL.
+- Katz, L., & Frost, R. (1992). "The orthographic depth hypothesis." Haskins Laboratories Status Report, 71-102.
+- Pires, T., et al. (2019). "How multilingual is multilingual BERT?" ACL.
 
 ---
 
-*Note: This theoretical framework extends Multi-Geometric Attention Theory with temporal constraints. All biological and cognitive findings are established; the connection to attention mechanisms is hypothetical and requires empirical validation.*
+*Note: This framework proposes correlational studies, not causal claims. The 9.7% transformation phase observation requires peer review. All hypotheses require empirical validation before any conclusions can be drawn.*
